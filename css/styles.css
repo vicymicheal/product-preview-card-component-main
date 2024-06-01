@@ -1,0 +1,133 @@
+:root {
+    --var-Dark-cyan: hsl(158, 36%, 37%);
+    --var-Cream: hsl(30, 38%, 92%);
+    --var-Very-dark-blue: hsl(212, 21%, 14%);
+    --var-Dark-grayish-blue: hsl(228, 12%, 48%);
+    --var-white: hsl(0, 0%, 100%);
+    --var-Dark-cyan-hover: hsl(158, 36%, 28%)
+}
+
+/* font-family: "Fraunces", serif; */
+/* font-family: "Montserrat", sans-serif;*/
+
+* {
+    margin: 0;
+}
+
+body {
+    background: var(--var-Cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    background: var(--var-white);
+    width: 100%;
+    min-width: 375px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+picture .img {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem;
+}
+
+.perfume {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 6px;
+    color: var(--var-Dark-grayish-blue);
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.heading {
+    font-family: "Fraunces", serif;
+    color: var(--var-Very-dark-blue);
+}
+
+.paragraph {
+    color: var(--var-Dark-grayish-blue);
+    line-height: 1.8;
+    font-family: "Montserrat", sans-serif;
+}
+
+.product-price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.new-price {
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--var-Dark-cyan);
+}
+
+.old-price {
+    font-family: "Montserrat", sans-serif;
+    color: var(--var-Dark-grayish-blue);
+    text-decoration: line-through 1px solid var(--var-Dark-grayish-blue);
+}
+
+.btn {
+    display: inline-flex;
+    gap: .75rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--var-Dark-cyan);
+    color: var(--var-white);
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn[data-icon="shopping-cart"]::before {
+    content: "";
+    background-image: url("/images/icon-cart.svg");
+    width: 15px;
+    height: 16px;
+}
+
+.btn:hover,
+.btn:focus {
+    cursor: pointer;
+    background: var(--var-Dark-cyan-hover);
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+
+@media (min-width: 520px) {
+
+    .card {
+        flex-direction: row;
+        width: 100%;
+        max-width: 600px;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    picture {
+        width: 100%;
+    }
+
+    .img {
+        height: 100%;
+    }
+
+    .content {
+        width: 90%;
+    }
+}
