@@ -79,7 +79,7 @@ picture .img {
 .old-price {
     font-family: "Montserrat", sans-serif;
     color: var(--var-Dark-grayish-blue);
-    text-decoration: line-through 1px solid var(--var-Dark-grayish-blue);
+    text-decoration: line-through 2px solid var(--var-Dark-grayish-blue);
 }
 
 .btn {
