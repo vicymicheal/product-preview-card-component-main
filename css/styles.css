@@ -22,11 +22,15 @@ body {
     min-height: 100vh;
 }
 
+.container {
+    margin: 1.25rem;
+}
+
 .card {
     background: var(--var-white);
     width: 100%;
     min-width: 375px;
-    max-width: 500px;
+    /* max-width: 450px; */
     display: flex;
     flex-direction: column;
     border-radius: 12px;
@@ -109,7 +113,7 @@ picture .img {
     transition: 0.8s;
 }
 
-@media (min-width: 520px) {
+@media (min-width: 550px) {
 
     .card {
         flex-direction: row;
